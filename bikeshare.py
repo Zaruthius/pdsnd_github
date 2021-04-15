@@ -114,7 +114,7 @@ def time_stats(df):
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     # display the hour in 24h formatting
-    print("The most common hour is: ", (str(df['hour'].mode()[0]).zfill(2)) + ":00")
+    print("The most common hour is: {}:00".(str(df['hour'].mode()[0]).zfill(2)))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
@@ -164,7 +164,7 @@ def user_stats(df):
 
     # display counts of user types
     # do not display the field name and datatype in the output
-    print("The following client types made trips:\n", df['User Type'].value_counts().to_string())
+    print("The following client types made trips:\n{}".df['User Type'].value_counts().to_string())
     # display counts of gender
     # error checking to ensure the data works with the washington data set.
     try:
@@ -174,7 +174,7 @@ def user_stats(df):
     # display earliest, most recent, and most common year of birth
     # error checking to ensure the data works with the washington data set.
     try:
-        print("\nThe oldest person who made a trip was born in: ", int(df['Birth Year'].min()))
+        print("\nThe oldest person who made a trip was born in: {}".int(df['Birth Year'].min()))
         print("The youngest person who made a trip was born in: ", int(df['Birth Year'].max()))
         print("The most common year of birth for people who made a trips was: ", int(df['Birth Year'].mode()[0]))
     except:
