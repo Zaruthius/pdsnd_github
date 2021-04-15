@@ -164,7 +164,7 @@ def user_stats(df):
 
     # display counts of user types
     # do not display the field name and datatype in the output
-    print("The following client types made trips:\n", df['User Type'].value_counts().to_string())
+    print("The following client types made trips:\n{}".df['User Type'].value_counts().to_string())
     # display counts of gender
     # error checking to ensure the data works with the washington data set.
     try:
