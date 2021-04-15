@@ -174,7 +174,7 @@ def user_stats(df):
     # display earliest, most recent, and most common year of birth
     # error checking to ensure the data works with the washington data set.
     try:
-        print("\nThe oldest person who made a trip was born in: ", int(df['Birth Year'].min()))
+        print("\nThe oldest person who made a trip was born in: {}".int(df['Birth Year'].min()))
         print("The youngest person who made a trip was born in: ", int(df['Birth Year'].max()))
         print("The most common year of birth for people who made a trips was: ", int(df['Birth Year'].mode()[0]))
     except:
