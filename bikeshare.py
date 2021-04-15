@@ -205,3 +205,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+""" Additional resources used:
+Udacity Python classroom content
+Stack Overflow community
+Python.org website
+"""
